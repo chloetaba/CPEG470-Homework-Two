@@ -24,6 +24,8 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000). The database is created and seeded on first request at `data/chalk.db`.
 
+On Vercel, Chalk uses `/tmp/chalk.db` because the deployed app directory is read-only. Vercel's temporary filesystem is not persistent or shared between function instances, so use a managed database for deployments that need reliable accounts, sessions, and posts.
+
 ```bash
 npm run build && npm start
 npm run seed
